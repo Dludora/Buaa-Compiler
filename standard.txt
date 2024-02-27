@@ -1,0 +1,30 @@
+
+define void @f() {
+func_f_entry:
+	ret
+}
+
+define i32 @main() {
+func_main_entry:
+	%var_c0 = alloca i32 4
+	%t1 = getelementptr [i32], %var_c0
+	%t2 = getInt
+	store %t1, %t2
+label_main_0_loop:
+	%t3 = getelementptr [i32], %var_c0
+	%t4 = load %t3
+	%t5 = icmp_le %t4, i32 2
+	br_eq %t5, i32 0, label_main_2_endLoop
+label_main_3_and:
+	br label_main_1_loop_stmt
+label_main_1_loop_stmt:
+	%t6 = getelementptr [i32], %var_c0
+	%t7 = getelementptr [i32], %var_c0
+	%t8 = load %t7
+	%t9 = add %t8, i32 1
+	store %t6, %t9
+	br label_main_0_loop
+label_main_2_endLoop:
+	ret i32 0
+}
+

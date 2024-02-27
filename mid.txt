@@ -1,0 +1,249 @@
+@var_a = global [i32]
+@var_b = global [i32]
+@var_c = global [i32]
+@var_d = global [i32]
+@var_e = global [i32]
+@var_i = global [i32], i32 0
+
+define i32 @func0(i32 %var_a0, i32 %var_b1) {
+func_func0_entry:
+	%var_i2 = alloca i32 4
+	%t3 = getelementptr [i32], %var_i2
+	store %t3, i32 0
+	%var_c4 = alloca i32 4
+	%t5 = getelementptr [i32], %var_c4
+	store %t5, i32 128
+	%t6 = getelementptr [i32], %var_a0
+	%t7 = load %t6
+	%t8 = getelementptr [i32], %var_b1
+	%t9 = load %t8
+	%t10 = add %t7, %t9
+	%t11 = getelementptr [i32], %var_c4
+	%t12 = load %t11
+	%t13 = srem %t10, %t12
+	ret %t13
+} 
+
+define i32 @func1(i32 %var_a0) {
+func_func1_entry:
+	%t1 = getelementptr [i32], @var_i
+	%t2 = getelementptr [i32], @var_i
+	%t3 = load %t2
+	%t4 = add %t3, i32 1
+	store %t1, %t4
+	%t5 = getelementptr [i32], @var_i
+	%t6 = load %t5
+	ret %t6
+} 
+
+define i32 @func2(i32 %var_a0, i32 %var_b1) {
+func_func2_entry:
+	%t2 = getelementptr [i32], %var_a0
+	%t3 = load %t2
+	%t4 = getelementptr [i32], %var_b1
+	%t5 = load %t4
+	%t6 = srem %t3, %t5
+	%t7 = icmp_eq %t6, i32 0
+	br_eq %t7, i32 0, label_func2_1_endif
+label_func2_2_and:
+	br label_func2_0_if
+label_func2_0_if:
+	ret i32 1
+label_func2_1_endif:
+	ret i32 0
+} 
+
+define i32 @func3() {
+func_func3_entry:
+	%t0 = getelementptr [i32], @var_i
+	%t1 = load %t0
+	print "glo_i = ", %t1, "\n"
+	%var_tt02 = alloca i32 4
+	%var_tt13 = alloca i32 4
+	%var_t24 = alloca i32 4
+	%var_tt35 = alloca i32 4
+	%var_tt46 = alloca i32 4
+	%var_v7 = alloca i32 4
+	%t8 = getelementptr [i32], %var_v7
+	store %t8, i32 1906
+label_func3_0_loop:
+	%t9 = getelementptr [i32], @var_i
+	%t10 = load %t9
+	%t11 = icmp_lt %t10, i32 10000
+	br_eq %t11, i32 0, label_func3_2_endLoop
+label_func3_3_and:
+	br label_func3_1_loop_stmt
+label_func3_1_loop_stmt:
+	%var_v12 = alloca i32 4
+	%t13 = getelementptr [i32], %var_v12
+	%t14 = getelementptr [i32], @var_a
+	%t15 = load %t14
+	%t16 = mul %t15, i32 4
+	%t17 = mul %t16, i32 32
+	%t18 = getelementptr [i32], @var_a
+	%t19 = load %t18
+	%t20 = mul %t17, %t19
+	%t21 = getelementptr [i32], @var_a
+	%t22 = load %t21
+	%t23 = sdiv %t20, %t22
+	%t24 = sdiv %t23, i32 32
+	store %t13, %t24
+	%t25 = getelementptr [i32], @var_b
+	%t26 = getelementptr [i32], @var_b
+	%t27 = load %t26
+	%t28 = getelementptr [i32], %var_v12
+	%t29 = load %t28
+	%t30 = call @func0(%t27, %t29)
+	store %t25, %t30
+	%t31 = getelementptr [i32], %var_tt02
+	%t32 = getelementptr [i32], @var_a
+	%t33 = load %t32
+	%t34 = mul %t33, i32 4
+	%t35 = getelementptr [i32], @var_b
+	%t36 = load %t35
+	%t37 = add %t34, %t36
+	%t38 = getelementptr [i32], @var_c
+	%t39 = load %t38
+	%t40 = add %t37, %t39
+	store %t31, %t40
+	%t41 = getelementptr [i32], %var_tt13
+	%t42 = getelementptr [i32], @var_a
+	%t43 = load %t42
+	%t44 = mul %t43, i32 4
+	%t45 = getelementptr [i32], @var_b
+	%t46 = load %t45
+	%t47 = add %t44, %t46
+	%t48 = getelementptr [i32], @var_c
+	%t49 = load %t48
+	%t50 = add %t47, %t49
+	%t51 = getelementptr [i32], @var_d
+	%t52 = load %t51
+	%t53 = add %t50, %t52
+	store %t41, %t53
+	%t54 = getelementptr [i32], %var_t24
+	%t55 = getelementptr [i32], @var_a
+	%t56 = load %t55
+	%t57 = mul %t56, i32 4
+	%t58 = getelementptr [i32], @var_b
+	%t59 = load %t58
+	%t60 = add %t57, %t59
+	%t61 = getelementptr [i32], @var_c
+	%t62 = load %t61
+	%t63 = add %t60, %t62
+	%t64 = getelementptr [i32], @var_d
+	%t65 = load %t64
+	%t66 = add %t63, %t65
+	%t67 = getelementptr [i32], @var_e
+	%t68 = load %t67
+	%t69 = add %t66, %t68
+	store %t54, %t69
+	%t70 = getelementptr [i32], %var_tt35
+	%t71 = getelementptr [i32], @var_a
+	%t72 = load %t71
+	%t73 = mul %t72, i32 4
+	%t74 = getelementptr [i32], @var_b
+	%t75 = load %t74
+	%t76 = add %t73, %t75
+	%t77 = getelementptr [i32], @var_c
+	%t78 = load %t77
+	%t79 = add %t76, %t78
+	%t80 = getelementptr [i32], @var_d
+	%t81 = load %t80
+	%t82 = add %t79, %t81
+	%t83 = getelementptr [i32], @var_e
+	%t84 = load %t83
+	%t85 = add %t82, %t84
+	store %t70, %t85
+	%t86 = getelementptr [i32], %var_tt46
+	%t87 = getelementptr [i32], @var_a
+	%t88 = load %t87
+	%t89 = mul %t88, i32 4
+	%t90 = getelementptr [i32], @var_b
+	%t91 = load %t90
+	%t92 = add %t89, %t91
+	%t93 = getelementptr [i32], @var_c
+	%t94 = load %t93
+	%t95 = add %t92, %t94
+	%t96 = getelementptr [i32], @var_d
+	%t97 = load %t96
+	%t98 = add %t95, %t97
+	%t99 = getelementptr [i32], @var_e
+	%t100 = load %t99
+	%t101 = add %t98, %t100
+	store %t86, %t101
+	%t102 = getelementptr [i32], @var_i
+	%t103 = load %t102
+	%t104 = call @func2(%t103, i32 1000)
+	br_eq %t104, i32 0, label_func3_5_endif
+label_func3_6_and:
+	br label_func3_4_if
+label_func3_4_if:
+	%t105 = getelementptr [i32], %var_tt02
+	%t106 = load %t105
+	%t107 = getelementptr [i32], %var_tt13
+	%t108 = load %t107
+	%t109 = add %t106, %t108
+	%t110 = getelementptr [i32], %var_t24
+	%t111 = load %t110
+	%t112 = add %t109, %t111
+	%t113 = getelementptr [i32], %var_tt35
+	%t114 = load %t113
+	%t115 = add %t112, %t114
+	%t116 = getelementptr [i32], %var_tt46
+	%t117 = load %t116
+	%t118 = add %t115, %t117
+	print "sum = ", %t118, "\n"
+label_func3_5_endif:
+	%t119 = getelementptr [i32], @var_i
+	%t120 = load %t119
+	%t121 = call @func1(%t120)
+	br label_func3_0_loop
+label_func3_2_endLoop:
+	%t122 = getelementptr [i32], %var_tt02
+	%t123 = load %t122
+	%t124 = getelementptr [i32], %var_tt13
+	%t125 = load %t124
+	%t126 = add %t123, %t125
+	%t127 = getelementptr [i32], %var_t24
+	%t128 = load %t127
+	%t129 = add %t126, %t128
+	%t130 = getelementptr [i32], %var_tt35
+	%t131 = load %t130
+	%t132 = add %t129, %t131
+	%t133 = getelementptr [i32], %var_tt46
+	%t134 = load %t133
+	%t135 = add %t132, %t134
+	ret %t135
+} 
+
+define i32 @main() {
+func_main_entry:
+	%var_i0 = alloca i32 4
+	%t1 = getelementptr [i32], %var_i0
+	store %t1, i32 0
+	%t2 = getelementptr [i32], @var_a
+	%t3 = getInt 
+	store %t2, %t3
+	%t4 = getelementptr [i32], @var_b
+	%t5 = getInt 
+	store %t4, %t5
+	%t6 = getelementptr [i32], @var_c
+	%t7 = getInt 
+	store %t6, %t7
+	%t8 = getelementptr [i32], @var_d
+	%t9 = getInt 
+	store %t8, %t9
+	%t10 = getelementptr [i32], @var_e
+	%t11 = getInt 
+	store %t10, %t11
+	%t12 = getelementptr [i32], %var_i0
+	%t13 = getInt 
+	store %t12, %t13
+	%t14 = getelementptr [i32], %var_i0
+	%t15 = load %t14
+	print "main_i = ", %t15, "\n"
+	%t16 = call @func3()
+	print %t16, "\n"
+	ret i32 0
+} 
+

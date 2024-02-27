@@ -1,0 +1,32 @@
+.data
+
+.text
+li $fp, 0x10040000
+jal func_main
+nop
+li $v0, 10
+syscall
+
+func_g:
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	lw $t0, 16($sp)
+	sw $t0, 16($fp)
+func_g_entry:
+	add $t0, $fp, 20
+	sw $t0, 24($fp)
+	li $t0, 1
+	lw $t1, 24($fp)
+	sw $t0, 0($t1)
+	li $v0, 1
+	jr $ra
+	nop 
+
+func_main:
+func_main_entry:
+	li $v0, 0
+	jr $ra
+	nop 
+

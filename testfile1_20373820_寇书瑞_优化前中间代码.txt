@@ -1,0 +1,7 @@
+void f1(int a) {         // FuncDef  -> Function (define i32(FuncType: i32 or void) @f1(i32 %var_a(FParam))(FuncName)
+
+}
+
+int main() {        // MainFuncDef  -> Function (define i32(FuncType: i32 or void) @main()(FuncName)
+    return 0;
+}

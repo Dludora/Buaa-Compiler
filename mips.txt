@@ -1,0 +1,676 @@
+.data
+var_i: .word 0
+var_a: .space 4
+var_b: .space 4
+var_c: .space 4
+var_d: .space 4
+var_e: .space 4
+str_0: .asciiz "glo_i = "
+str_1: .asciiz "\n"
+str_2: .asciiz "sum = "
+str_3: .asciiz "\n"
+str_4: .asciiz "main_i = "
+str_5: .asciiz "\n"
+str_6: .asciiz "\n"
+
+.text
+li $fp, 0x10040000
+jal func_main
+nop
+li $v0, 10
+syscall
+
+func_func0:
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+func_func0_entry:
+	add $t0, $fp, 8
+	sw $t0, 16($fp)
+	li $t0, 0
+	lw $t1, 16($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 12
+	sw $t0, 16($fp)
+	li $t0, 128
+	lw $t1, 16($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 0
+	sw $t0, 16($fp)
+	lw $t1, 16($fp)
+	lw $t1, 0($t1)
+	sw $t1, 16($fp)
+	add $t0, $fp, 4
+	sw $t0, 20($fp)
+	lw $t1, 20($fp)
+	lw $t1, 0($t1)
+	sw $t1, 20($fp)
+	lw $t2, 20($fp)
+	lw $t1, 16($fp)
+	add $t0, $t1, $t2
+	sw $t0, 16($fp)
+	add $t0, $fp, 12
+	sw $t0, 20($fp)
+	lw $t1, 20($fp)
+	lw $t1, 0($t1)
+	sw $t1, 20($fp)
+	lw $t2, 20($fp)
+	lw $t1, 16($fp)
+	rem $t0, $t1, $t2
+	sw $t0, 16($fp)
+	lw $v0, 16($fp)
+	jr $ra
+	nop 
+
+func_func1:
+	sw $a0, 0($fp)
+func_func1_entry:
+	la $t0, var_i
+	sw $t0, 4($fp)
+	la $t0, var_i
+	sw $t0, 8($fp)
+	lw $t1, 8($fp)
+	lw $t1, 0($t1)
+	sw $t1, 8($fp)
+	lw $t1, 8($fp)
+	add $t0, $t1, 1
+	sw $t0, 8($fp)
+	lw $t0, 8($fp)
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	la $t0, var_i
+	sw $t0, 4($fp)
+	lw $t1, 4($fp)
+	lw $t1, 0($t1)
+	sw $t1, 4($fp)
+	lw $v0, 4($fp)
+	jr $ra
+	nop 
+
+func_func2:
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+func_func2_entry:
+	add $t0, $fp, 0
+	sw $t0, 8($fp)
+	lw $t1, 8($fp)
+	lw $t1, 0($t1)
+	sw $t1, 8($fp)
+	add $t0, $fp, 4
+	sw $t0, 12($fp)
+	lw $t1, 12($fp)
+	lw $t1, 0($t1)
+	sw $t1, 12($fp)
+	lw $t2, 12($fp)
+	lw $t1, 8($fp)
+	rem $t0, $t1, $t2
+	sw $t0, 8($fp)
+	lw $t1, 8($fp)
+	seq $t0, $t1, 0
+	sw $t0, 8($fp)
+	lw $t1, 8($fp)
+	beq $t1, 0, label_func2_1_endif
+	nop 
+label_func2_2_and:
+	j label_func2_0_if
+	nop 
+label_func2_0_if:
+	li $v0, 1
+	jr $ra
+	nop 
+label_func2_1_endif:
+	li $v0, 0
+	jr $ra
+	nop 
+
+func_func3:
+func_func3_entry:
+	la $t0, var_i
+	sw $t0, 28($fp)
+	lw $t1, 28($fp)
+	lw $t1, 0($t1)
+	sw $t1, 28($fp)
+	la $a0, str_0
+	li $v0, 4
+	syscall 
+	lw $a0, 28($fp)
+	li $v0, 1
+	syscall 
+	la $a0, str_1
+	li $v0, 4
+	syscall 
+	add $t0, $fp, 20
+	sw $t0, 28($fp)
+	li $t0, 1906
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+label_func3_0_loop:
+	la $t0, var_i
+	sw $t0, 28($fp)
+	lw $t1, 28($fp)
+	lw $t1, 0($t1)
+	sw $t1, 28($fp)
+	li $t2, 10000
+	lw $t1, 28($fp)
+	slt $t0, $t1, $t2
+	sw $t0, 28($fp)
+	lw $t1, 28($fp)
+	beq $t1, 0, label_func3_2_endLoop
+	nop 
+label_func3_3_and:
+	j label_func3_1_loop_stmt
+	nop 
+label_func3_1_loop_stmt:
+	add $t0, $fp, 24
+	sw $t0, 28($fp)
+	la $t0, var_a
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, 4
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, 32
+	sw $t0, 32($fp)
+	la $t0, var_a
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_a
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	div $t0, $t1, $t2
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	div $t0, $t1, 32
+	sw $t0, 32($fp)
+	lw $t0, 32($fp)
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+	la $t0, var_b
+	sw $t0, 28($fp)
+	la $t0, var_b
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	add $t0, $fp, 24
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	add $sp, $sp, -4
+	sw $ra, 4($sp)
+	add $sp, $sp, -8
+	lw $a1, 36($fp)
+	lw $a0, 32($fp)
+	add $fp, $fp, 32
+	jal func_func0
+	nop 
+	add $fp, $fp, -32
+	add $sp, $sp, 8
+	lw $ra, 4($sp)
+	add $sp, $sp, 4
+	sw $v0, 32($fp)
+	lw $t0, 32($fp)
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 0
+	sw $t0, 28($fp)
+	la $t0, var_a
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, 4
+	sw $t0, 32($fp)
+	la $t0, var_b
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_c
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	lw $t0, 32($fp)
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 4
+	sw $t0, 28($fp)
+	la $t0, var_a
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, 4
+	sw $t0, 32($fp)
+	la $t0, var_b
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_c
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_d
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	lw $t0, 32($fp)
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 8
+	sw $t0, 28($fp)
+	la $t0, var_a
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, 4
+	sw $t0, 32($fp)
+	la $t0, var_b
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_c
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_d
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_e
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	lw $t0, 32($fp)
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 12
+	sw $t0, 28($fp)
+	la $t0, var_a
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, 4
+	sw $t0, 32($fp)
+	la $t0, var_b
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_c
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_d
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_e
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	lw $t0, 32($fp)
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 16
+	sw $t0, 28($fp)
+	la $t0, var_a
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t1, 32($fp)
+	mul $t0, $t1, 4
+	sw $t0, 32($fp)
+	la $t0, var_b
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_c
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_d
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	la $t0, var_e
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	lw $t0, 32($fp)
+	lw $t1, 28($fp)
+	sw $t0, 0($t1)
+	la $t0, var_i
+	sw $t0, 28($fp)
+	lw $t1, 28($fp)
+	lw $t1, 0($t1)
+	sw $t1, 28($fp)
+	add $sp, $sp, -4
+	sw $ra, 4($sp)
+	add $sp, $sp, -8
+	li $a1, 1000
+	lw $a0, 28($fp)
+	add $fp, $fp, 28
+	jal func_func2
+	nop 
+	add $fp, $fp, -28
+	add $sp, $sp, 8
+	lw $ra, 4($sp)
+	add $sp, $sp, 4
+	sw $v0, 28($fp)
+	lw $t1, 28($fp)
+	beq $t1, 0, label_func3_5_endif
+	nop 
+label_func3_6_and:
+	j label_func3_4_if
+	nop 
+label_func3_4_if:
+	add $t0, $fp, 0
+	sw $t0, 28($fp)
+	lw $t1, 28($fp)
+	lw $t1, 0($t1)
+	sw $t1, 28($fp)
+	add $t0, $fp, 4
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t2, 32($fp)
+	lw $t1, 28($fp)
+	add $t0, $t1, $t2
+	sw $t0, 28($fp)
+	add $t0, $fp, 8
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t2, 32($fp)
+	lw $t1, 28($fp)
+	add $t0, $t1, $t2
+	sw $t0, 28($fp)
+	add $t0, $fp, 12
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t2, 32($fp)
+	lw $t1, 28($fp)
+	add $t0, $t1, $t2
+	sw $t0, 28($fp)
+	add $t0, $fp, 16
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	lw $t2, 32($fp)
+	lw $t1, 28($fp)
+	add $t0, $t1, $t2
+	sw $t0, 28($fp)
+	la $a0, str_2
+	li $v0, 4
+	syscall 
+	lw $a0, 28($fp)
+	li $v0, 1
+	syscall 
+	la $a0, str_3
+	li $v0, 4
+	syscall 
+label_func3_5_endif:
+	la $t0, var_i
+	sw $t0, 28($fp)
+	lw $t1, 28($fp)
+	lw $t1, 0($t1)
+	sw $t1, 28($fp)
+	add $sp, $sp, -4
+	sw $ra, 4($sp)
+	add $sp, $sp, -4
+	lw $a0, 28($fp)
+	add $fp, $fp, 28
+	jal func_func1
+	nop 
+	add $fp, $fp, -28
+	add $sp, $sp, 4
+	lw $ra, 4($sp)
+	add $sp, $sp, 4
+	sw $v0, 28($fp)
+	j label_func3_0_loop
+	nop 
+label_func3_2_endLoop:
+	add $t0, $fp, 0
+	sw $t0, 32($fp)
+	lw $t1, 32($fp)
+	lw $t1, 0($t1)
+	sw $t1, 32($fp)
+	add $t0, $fp, 4
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	add $t0, $fp, 8
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	add $t0, $fp, 12
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	add $t0, $fp, 16
+	sw $t0, 36($fp)
+	lw $t1, 36($fp)
+	lw $t1, 0($t1)
+	sw $t1, 36($fp)
+	lw $t2, 36($fp)
+	lw $t1, 32($fp)
+	add $t0, $t1, $t2
+	sw $t0, 32($fp)
+	lw $v0, 32($fp)
+	jr $ra
+	nop 
+
+func_main:
+func_main_entry:
+	add $t0, $fp, 0
+	sw $t0, 4($fp)
+	li $t0, 0
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	la $t0, var_a
+	sw $t0, 4($fp)
+	li $v0, 5
+	syscall 
+	sw $v0, 8($fp)
+	lw $t0, 8($fp)
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	la $t0, var_b
+	sw $t0, 4($fp)
+	li $v0, 5
+	syscall 
+	sw $v0, 8($fp)
+	lw $t0, 8($fp)
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	la $t0, var_c
+	sw $t0, 4($fp)
+	li $v0, 5
+	syscall 
+	sw $v0, 8($fp)
+	lw $t0, 8($fp)
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	la $t0, var_d
+	sw $t0, 4($fp)
+	li $v0, 5
+	syscall 
+	sw $v0, 8($fp)
+	lw $t0, 8($fp)
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	la $t0, var_e
+	sw $t0, 4($fp)
+	li $v0, 5
+	syscall 
+	sw $v0, 8($fp)
+	lw $t0, 8($fp)
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 0
+	sw $t0, 4($fp)
+	li $v0, 5
+	syscall 
+	sw $v0, 8($fp)
+	lw $t0, 8($fp)
+	lw $t1, 4($fp)
+	sw $t0, 0($t1)
+	add $t0, $fp, 0
+	sw $t0, 4($fp)
+	lw $t1, 4($fp)
+	lw $t1, 0($t1)
+	sw $t1, 4($fp)
+	la $a0, str_4
+	li $v0, 4
+	syscall 
+	lw $a0, 4($fp)
+	li $v0, 1
+	syscall 
+	la $a0, str_5
+	li $v0, 4
+	syscall 
+	add $sp, $sp, -4
+	sw $ra, 4($sp)
+	add $sp, $sp, 0
+	add $fp, $fp, 4
+	jal func_func3
+	nop 
+	add $fp, $fp, -4
+	add $sp, $sp, 0
+	lw $ra, 4($sp)
+	add $sp, $sp, 4
+	sw $v0, 4($fp)
+	lw $a0, 4($fp)
+	li $v0, 1
+	syscall 
+	la $a0, str_6
+	li $v0, 4
+	syscall 
+	li $v0, 0
+	jr $ra
+	nop 
+

@@ -1,0 +1,14 @@
+
+define i32 @g(i32 %var_a0, i32 %var_b1, i32 %var_c2, i32 %var_d3, i32 %var_e4) {
+func_g_entry:
+	%var_a15 = alloca i32 4
+	%t6 = getelementptr [i32], %var_a15
+	store %t6, i32 1
+	ret i32 1
+} 
+
+define i32 @main() {
+func_main_entry:
+	ret i32 0
+} 
+
